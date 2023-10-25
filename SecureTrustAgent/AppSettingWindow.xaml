@@ -1,0 +1,498 @@
+﻿<Window x:Class="SecureTrustAgent.AppSettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecureTrustAgent"
+        xmlns:localization="clr-namespace:SecureTrustAgent.Localization"
+        mc:Ignorable="d"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="AppSettingWindow" Height="720" Width="1200"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Windows_MouseDown"
+        >
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
+    <Border x:Name="setting_window_border" CornerRadius="5">
+        <!--
+        <Border.Background>
+            <ImageBrush ImageSource="/image/backimage.jpg"
+                        Stretch ="Fill"/>
+        </Border.Background>
+        -->
+        <Border CornerRadius="3"
+                BorderThickness="1"
+            Opacity="0.95" Margin="0,0,0,6">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FF93D0E5" Offset="0"/>
+                    <GradientStop Color="#FF2B61F5" Offset="0.75"/>
+                    <GradientStop Color="#FFA8CEE3" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#FF1F1F2B" Offset="0"/>
+                    <GradientStop Color="#FF494A58" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Button x:Name="btnMinimize"
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#278BEF"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="1"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button x:Name="btnClose"
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnClose_Click">
+
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#DA34AE"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#C62DAE"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="1"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+                </Grid>
+
+                <StackPanel
+                            Grid.Row="1"
+                            Orientation="Vertical"
+                            Margin="14,35,917,0">
+                    <Image Source="/Image/free-icon-settings-1231238.png"
+                           Width="100" Height="100"/>
+                    <TextBlock Text="{x:Static localization:res.STR_SET_MAINTITLE}"
+                               Foreground="DarkGray"
+                               FontSize="35"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Text="{x:Static localization:res.SET_SET_SUBTITLE}"
+                               Foreground="LightGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               Margin="0,5,0,0"/>
+
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="354" Margin="408,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="600">
+
+                    <TextBlock x:Name="tb_WebadminHelp" Text="{x:Static localization:res.STR_SET_WEBADMINHELP}"
+                               Foreground="LightGray"
+                               FontSize="14"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               Margin="5,5,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecorationCollection>
+                                <TextDecoration  
+        PenThicknessUnit="FontRecommended">
+                                    <TextDecoration.Pen>
+                                        <Pen Thickness="1.5">
+                                            <Pen.Brush>
+                                                <LinearGradientBrush Opacity="0.5"
+                StartPoint="0,0.5"  EndPoint="1,0.5">
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="Yellow" Offset="0" />
+                                                        <GradientStop Color="Red" Offset="1" />
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Pen.Brush>
+                                            <Pen.DashStyle>
+                                                <DashStyle Dashes="2"/>
+                                            </Pen.DashStyle>
+                                        </Pen>
+                                    </TextDecoration.Pen>
+                                </TextDecoration>
+                            </TextDecorationCollection>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+
+                    <Grid>
+                        <CheckBox x:Name="checkWebAny" 
+                              Width="100" 
+                              Height="15"
+                              Foreground="LightGray"
+                              Content="Use Any IP"
+                              FontSize="13"
+                              FontWeight="Medium"
+                              FontFamily="Montserrat"
+                              Margin="360,17,3,28"
+                                  Checked="WebUserAnyIP_Checked"
+                                  Unchecked="WebUserAnyIP_UnChecked"
+                              >
+                        </CheckBox>
+
+                        <TextBlock Text="{x:Static localization:res.STR_SET_WEB_SET_IPADDR}"
+                               Foreground="LightGray"
+                               FontSize="13"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               Margin="30,40,0,0"/>
+
+                        <TextBox x:Name="editWebIpAddr"
+                               Style="{DynamicResource WatermarkTextBox}" 
+                               Tag="Web Listen IP Address"
+                               Margin="211,35,67,0" 
+                               TextWrapping="Wrap" 
+                               Text="" 
+                               Height="25"
+                               VerticalAlignment="Top" Width="NaN"/>
+                    </Grid>
+
+
+                    <Grid>
+                        <TextBlock Text="{x:Static localization:res.STR_SET_WEB_SET_PORT}"
+                               Foreground="LightGray"
+                               FontSize="13"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               Margin="30,7,0,0"/>
+
+                        <TextBox x:Name="editWebPort"
+                            Style="{DynamicResource WatermarkTextBox}"
+                             FontSize="13"
+                             BorderThickness="0"
+                             HorizontalAlignment="Left" 
+                             Height="25" 
+                             Margin="210,10,64,0" 
+                             VerticalAlignment="Top" Width="173"/>
+                    </Grid>
+                    <!--
+                    <Grid>
+                        <TextBlock Text="* WEB Server Listen PORT :"
+                                   Foreground="LightGray"
+                                   FontSize="13"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Left"
+                                   Margin="30,10,0,0"/>
+
+                        <TextBox Foreground="LightGray" 
+                             Background="Gray"
+                             FontSize="13"
+                             BorderThickness="0"
+                             HorizontalAlignment="Left" 
+                             Height="15" 
+                             Margin="227,8,0,0" TextWrapping="Wrap" Text="8081" VerticalAlignment="Top" Width="173"/>
+
+
+                    </Grid>
+                    -->
+                    <TextBlock Text="{x:Static localization:res.STR_SET_SSHLOGINHELP}"
+                               Foreground="LightGray"
+                               FontSize="14"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               Margin="0,25,0,0"
+                               >
+                        <TextBlock.TextDecorations>
+                            <TextDecorationCollection>
+                                <TextDecoration  
+        PenThicknessUnit="FontRecommended">
+                                    <TextDecoration.Pen>
+                                        <Pen Thickness="1.5">
+                                            <Pen.Brush>
+                                                <LinearGradientBrush Opacity="0.5"
+                StartPoint="0,0.5"  EndPoint="1,0.5">
+                                                    <GradientStop Color="Yellow" Offset="0" />
+                                                    <GradientStop Color="Red" Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Pen.Brush>
+                                            <Pen.DashStyle>
+                                                <DashStyle Dashes="2"/>
+                                            </Pen.DashStyle>
+                                        </Pen>
+                                    </TextDecoration.Pen>
+                                </TextDecoration>
+                            </TextDecorationCollection>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="205*"/>
+                            <ColumnDefinition Width="258*"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Grid Grid.ColumnSpan="2">
+                            <CheckBox x:Name="checkSshAny" 
+                              Width="100" 
+                              Height="15"
+                              Foreground="LightGray"
+                              Content="Use Any IP"
+                              FontSize="13"
+                              FontWeight="Medium"
+                              FontFamily="Montserrat"
+                              Margin="354,15,9,62"
+                                      Checked="SSHUserAnyIP_Checked"
+                                      Unchecked="SSHUserAnyIP_UnChecked"
+                              >
+                            </CheckBox>
+
+                            <TextBlock Text="{x:Static localization:res.STR_SET_SSH_SET_IPADDR}"
+                               Foreground="LightGray"
+                               FontSize="13"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               Width="200"
+                               Margin="20,37,0,-2">
+
+                            </TextBlock>
+
+                            <TextBox x:Name="editSSHIpAddr"
+                                Style="{DynamicResource WatermarkTextBox}"
+                                 FontSize="13"
+                                 BorderThickness="0"
+                                 HorizontalAlignment="Left" 
+                                 Height="24" 
+                                 Margin="209,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Center" Width="313"
+                                 
+                                 />
+
+
+
+                        </Grid>
+
+                        <Grid Grid.ColumnSpan="2">
+                            <TextBlock Text="{x:Static localization:res.STR_SET_SSH_SET_PORT}"
+                               Foreground="LightGray"
+                               FontSize="13"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               Width="180"
+                               Margin="22,71,0,-16"/>
+
+                            <TextBox x:Name="editSSHPort"
+                                Style="{DynamicResource WatermarkTextBox}"
+                                FontSize="13"
+                                BorderThickness="0"
+                                HorizontalAlignment="Right" 
+                                Height="25" 
+                                TextDecorations="Underline"
+                                Margin="0,67,219,0" TextWrapping="Wrap" Text="4109" VerticalAlignment="Top" Width="174"/>
+                        </Grid>
+
+
+                    </Grid>
+
+                    <TextBlock Text="{x:Static localization:res.STR_SET_CHANGELANGHELP}"
+                               Foreground="LightGray"
+                               FontSize="14"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               Margin="5,35,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecorationCollection>
+                                <TextDecoration  
+        PenThicknessUnit="FontRecommended">
+                                    <TextDecoration.Pen>
+                                        <Pen Thickness="1.5">
+                                            <Pen.Brush>
+                                                <LinearGradientBrush Opacity="0.5"
+                StartPoint="0,0.5"  EndPoint="1,0.5">
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="Yellow" Offset="0" />
+                                                        <GradientStop Color="Red" Offset="1" />
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Pen.Brush>
+                                            <Pen.DashStyle>
+                                                <DashStyle Dashes="2"/>
+                                            </Pen.DashStyle>
+                                        </Pen>
+                                    </TextDecoration.Pen>
+                                </TextDecoration>
+                            </TextDecorationCollection>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+                    <Grid>
+                        <StackPanel>
+                            <Grid Width="441">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="58*"/>
+                                    <ColumnDefinition Width="108*"/>
+                                    <ColumnDefinition Width="275*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="{x:Static localization:res.STR_SET_LANGUAGE}"
+                                    Foreground="LightGray"
+                                    FontSize="14"
+                                    FontWeight="Medium"
+                                    FontFamily="Montserrat"
+                                    HorizontalAlignment="Left"
+                                    Margin="30,15,0,0" Grid.ColumnSpan="2"/>
+
+                                <ComboBox x:Name="langCombo" Width="260"
+                                    Height="25"
+                                    Foreground="DarkGray"
+                                    FontSize="14"
+                                    FontWeight="Medium"
+                                    FontFamily="Montserrat"
+                                    HorizontalAlignment="Left"
+                                    BorderThickness="0"
+                                    Background="Transparent"
+                                    SnapsToDevicePixels="true"
+                                    Margin="33,16,0,1" SelectionChanged="langCombo_SelectionChanged" Grid.Column="2" RenderTransformOrigin="0.251,0.519"
+                                    
+                                    >
+                                    <ComboBox.ItemContainerStyle>
+                                        <Style TargetType="ComboBoxItem">
+                                            <Setter Property="Background" Value="LightGray"/>
+                                            <Setter Property="BorderBrush" Value="LightGray"/>
+                                        </Style>
+                                    </ComboBox.ItemContainerStyle>
+
+
+
+                                    <sys:String>Ko_KR</sys:String>
+                                    <sys:String>en_US</sys:String>
+
+                                </ComboBox>
+
+                            </Grid>
+
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+                <Button x:Name="HomeBtn" 
+                        Background="Transparent"
+                        Foreground="Transparent"
+                        HorizontalAlignment="Left" 
+                        Height="25" 
+                        Margin="30,30,0,0" 
+                        Grid.RowSpan="2" 
+                        VerticalAlignment="Top" 
+                        Width="25" Click="HomeBtn_Click">
+                    <Image Source="image\home_icon-icons.com_73532.png"></Image>
+                </Button>
+
+                <Button x:Name="btSettingSave"
+                            Command="{Binding LoginCommand}"
+                            BorderThickness="0"
+                            Content="{x:Static localization:res.STR_SET_SAVE}"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Margin="350,250,0,0" 
+                             Click="btnSettingSave_Click"
+                            >
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#462ad8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                        CornerRadius="2"
+                                        Background="{TemplateBinding Background}" Margin="581,365,67,-405">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+            </Grid>
+
+        </Border>
+    </Border>
+</Window>

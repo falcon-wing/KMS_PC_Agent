@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ICTK_logo_white_V" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\ICTK_logo_white_V.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SET_INFORM_SUBTITLE" xml:space="preserve">
+    <value>You can check product information and information related to technology.</value>
+  </data>
+  <data name="SET_SET_SUBTITLE" xml:space="preserve">
+    <value>You can set information related to the operation of the application.</value>
+  </data>
+  <data name="STR_APP_STARTFAIL_MESSAGE" xml:space="preserve">
+    <value>Program is already running. Please try again after closing the running program.</value>
+  </data>
+  <data name="STR_APP_TITLE_WARNING" xml:space="preserve">
+    <value>WARNING</value>
+  </data>
+  <data name="STR_BTN_RUNADMINPAGE" xml:space="preserve">
+    <value>Admin Page</value>
+  </data>
+  <data name="STR_BTN_SIGNIN" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="STR_FAIL_AND_RETRY_REG_MSG" xml:space="preserve">
+    <value>The registration process has failed. Would you like to retry the operation? 
+Please reconnect the USB and select the "Check" button.</value>
+  </data>
+  <data name="STR_INFOM_MAINTITLE" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="STR_INFORM_FIRSTWHAT" xml:space="preserve">
+    <value>What is PUF?</value>
+  </data>
+  <data name="STR_INFORM_SECONDWHAT" xml:space="preserve">
+    <value>What is different?</value>
+  </data>
+  <data name="STR_INFORM_THIRDWHAT" xml:space="preserve">
+    <value>What can you do?</value>
+  </data>
+  <data name="STR_MENU_EXIT" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="STR_MENU_INFO" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="STR_MENU_OPEN" xml:space="preserve">
+    <value>OPEN</value>
+  </data>
+  <data name="STR_MENU_SETTING" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="STR_MFAREG_FAILTITLE" xml:space="preserve">
+    <value>Registration failed.</value>
+  </data>
+  <data name="STR_MFA_AUTHHELPMESSAGE" xml:space="preserve">
+    <value>Please place your finger overr the sensor</value>
+  </data>
+  <data name="STR_MFA_AUTHHELPSUBMESSAGE" xml:space="preserve">
+    <value>Please remove your finger and put it back again.</value>
+  </data>
+  <data name="STR_MFA_CONTENT_CLOSE" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="STR_MFA_CONTENT_RETRY" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="STR_MFA_FAILANDFINMSG" xml:space="preserve">
+    <value>We couldn't find the connected USB.
+Please check the USB connection status and try again.
+Would you like to try again?</value>
+  </data>
+  <data name="STR_MFA_FAILANDFINMSG_V2" xml:space="preserve">
+    <value>mfa 인증작업이 실패 했습니다. 
+연결 중인 USB가 있다면 재 연결 후 작업을 다시 시도해 주세요.
+작업을 종료 합니다.</value>
+  </data>
+  <data name="STR_MFA_FAILANDRETRYMSG" xml:space="preserve">
+    <value>연결중인 USB를 찾을 수 없습니다.
+USB 연결상태를 확인 후 다시 시도해 주세요.
+다시 시도 하시겠습니까?</value>
+  </data>
+  <data name="STR_MFA_FAILMSG" xml:space="preserve">
+    <value>The MFA authentication process has failed. 
+Would you like to retry the authentication process?</value>
+  </data>
+  <data name="STR_MFA_FAILTITLE" xml:space="preserve">
+    <value>authentication failed</value>
+  </data>
+  <data name="STR_MFA_FAIL_RESULTMSG_FIRST" xml:space="preserve">
+    <value>Login operation failed.</value>
+  </data>
+  <data name="STR_MFA_FAIL_RESULTMSG_SECOND" xml:space="preserve">
+    <value>Clicking the Retry button restarts the authentication process.</value>
+  </data>
+  <data name="STR_MFA_HELPMSG" xml:space="preserve">
+    <value>Initiating authentication process. Please tap your fingerprint on the device with blinking LED.
+If the LED turns red upon fingerprint contact, please try again.</value>
+  </data>
+  <data name="STR_MFA_REGPUFHELPMSG" xml:space="preserve">
+    <value>The registration process has been completed.
+Please disconnect the connected USB device from your PC and reconnect it again.</value>
+  </data>
+  <data name="STR_MFA_REREGHELPMSG" xml:space="preserve">
+    <value>You will start the re-registration process. Please tap your fingerprint on the device with the blinking LED.
+Re-registration involves resetting the previous registration and proceeding with the registration process.
+After entering the previously registered fingerprint for authentication, once the authentication is complete, the reset and re-registration process will proceed.
+Please review the request message displayed on the screen and proceed with the task.</value>
+  </data>
+  <data name="STR_MFA_RESETHELPMSG" xml:space="preserve">
+    <value>You are conducting user verification for the cancellation process. If MFA authentication is successful, the cancellation process will proceed, and all existing registration information will be deleted after the completion of the process</value>
+  </data>
+  <data name="STR_MFA_RESETRESULTHELPMSG" xml:space="preserve">
+    <value>The cancellation process has been completed.
+Please disconnect the connected USB device from your PC and reconnect it again.</value>
+  </data>
+  <data name="STR_MFA_SIGNUPHELPMSG" xml:space="preserve">
+    <value>Registration process initiated. Please tap your fingerprint on the device with flashing LED.
+We will collect your fingerprint three times for registration.
+Please check the message on the screen requesting recontact of the fingerprint and proceed with the registration process.
+
+</value>
+  </data>
+  <data name="STR_MFA_SUCCESS_RESULTMSG_FIRST" xml:space="preserve">
+    <value>Login operation completed successfully.</value>
+  </data>
+  <data name="STR_MFA_SUCCESS_RESULTMSG_SECEND" xml:space="preserve">
+    <value>Click the close button to call the admin page.</value>
+  </data>
+  <data name="STR_MSG_SAVELASTLOGININFO" xml:space="preserve">
+    <value>Would you like to save your last login information? 
+This information will be utilized upon the restart of the PC Agent.</value>
+  </data>
+  <data name="STR_PRODUCT_NAME" xml:space="preserve">
+    <value>SecureTrust</value>
+  </data>
+  <data name="STR_RETSTR_FAIL_MFAAUTH" xml:space="preserve">
+    <value>Fingerprint authentication failed</value>
+  </data>
+  <data name="STR_RETSTR_SUCCESS_MFAAUTH" xml:space="preserve">
+    <value>Fingerprint authentication was successful</value>
+  </data>
+  <data name="STR_SET_CHANGELANGHELP" xml:space="preserve">
+    <value>Change language on your application.</value>
+  </data>
+  <data name="STR_SET_CHANG_HTTPLISTENERHELP_V2" xml:space="preserve">
+    <value>Setting up the security login feature for the admin page.</value>
+  </data>
+  <data name="STR_SET_HTTP_LINTEN_PORT" xml:space="preserve">
+    <value>* http Listen PORT :</value>
+  </data>
+  <data name="STR_SET_LANGUAGE" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="STR_SET_LANGUAGE_WARNMSG" xml:space="preserve">
+    <value>Would you like to proceed with the change? 
+The program restarts on progress.</value>
+  </data>
+  <data name="STR_SET_LANGUAGE_WARNMSG2" xml:space="preserve">
+    <value>Would you like to proceed with the change?</value>
+  </data>
+  <data name="STR_SET_MAINTITLE" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="STR_SET_SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="STR_SET_SSHLOGINHELP" xml:space="preserve">
+    <value>Settings for SSH security login.</value>
+  </data>
+  <data name="STR_SET_SSH_SET_IPADDR" xml:space="preserve">
+    <value>* TCP Server Listen IP Address :</value>
+  </data>
+  <data name="STR_SET_SSH_SET_PORT" xml:space="preserve">
+    <value>* TCP Server Listen PORT :</value>
+  </data>
+  <data name="STR_SET_WEBADMINHELP" xml:space="preserve">
+    <value>Settings for web administrator security login.</value>
+  </data>
+  <data name="STR_SET_WEB_SET_IPADDR" xml:space="preserve">
+    <value>* Web Listen IP Address :</value>
+  </data>
+  <data name="STR_SET_WEB_SET_PORT" xml:space="preserve">
+    <value>* Web Listen PORT :</value>
+  </data>
+  <data name="STR_SIGNOUT_TITLE" xml:space="preserve">
+    <value>Cancellation completed.</value>
+  </data>
+  <data name="STR_SIGNOUT_WARN_MSG" xml:space="preserve">
+    <value>You will begin the USB registration cancellation process.
+Once the process starts, all previously registered information will be deleted.
+Would you like to proceed with the operation?</value>
+  </data>
+  <data name="STR_SIGNUP_TITLE" xml:space="preserve">
+    <value>Registration completed.</value>
+  </data>
+  <data name="STR_WATING_DLGMSG" xml:space="preserve">
+    <value>Wating...</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_REJOIN" xml:space="preserve">
+    <value>re-Registration</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_SIGNIN" xml:space="preserve">
+    <value>Sign-In</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_SIGNOUT" xml:space="preserve">
+    <value>Sign-Out</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_SIGNUP" xml:space="preserve">
+    <value>Sign-Up</value>
+  </data>
+  <data name="STR_WORKERROR_TITLE" xml:space="preserve">
+    <value>task error</value>
+  </data>
+</root>

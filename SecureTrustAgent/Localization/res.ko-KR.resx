@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ICTK_logo_white_V" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>ICTK_logo_white_V.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SET_INFORM_SUBTITLE" xml:space="preserve">
+    <value>제품정보와 기술에 관련된 정보를 확인 할 수 있습니다.</value>
+  </data>
+  <data name="SET_SET_SUBTITLE" xml:space="preserve">
+    <value>애플리케이션의 동작과 관련된 정보를 설정할 수 있습니다.</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>등록 작업이 실패 했습니다.</value>
+  </data>
+  <data name="STR_APP_STARTFAIL_MESSAGE" xml:space="preserve">
+    <value>프로그램이 이미 실행 중입니다. 동작 중인 프로그램을 종료 후 다시 시도해 주세요.</value>
+  </data>
+  <data name="STR_APP_TITLE_WARNING" xml:space="preserve">
+    <value>경고</value>
+  </data>
+  <data name="STR_BTN_RUNADMINPAGE" xml:space="preserve">
+    <value>관리자 페이지</value>
+  </data>
+  <data name="STR_BTN_SIGNIN" xml:space="preserve">
+    <value>로그인</value>
+  </data>
+  <data name="STR_FAIL_AND_RETRY_REG_MSG" xml:space="preserve">
+    <value>등록 작업이 실패 했습니다. 작업을 재 시도 하시겠습니까?
+USB를 다시 연결 후 확인 버튼을 선택하세요.</value>
+  </data>
+  <data name="STR_INFOM_MAINTITLE" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="STR_INFORM_FIRSTWHAT" xml:space="preserve">
+    <value>What is PUF?</value>
+  </data>
+  <data name="STR_INFORM_SECONDWHAT" xml:space="preserve">
+    <value>What is different?</value>
+  </data>
+  <data name="STR_INFORM_THIRDWHAT" xml:space="preserve">
+    <value>What can you do?</value>
+  </data>
+  <data name="STR_MENU_EXIT" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="STR_MENU_INFO" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="STR_MENU_OPEN" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="STR_MENU_SETTING" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="STR_MFAREG_FAILTITLE" xml:space="preserve">
+    <value>등록실패</value>
+  </data>
+  <data name="STR_MFA_AUTHHELPMESSAGE" xml:space="preserve">
+    <value>센서 위에 손가락을 올려주세요. </value>
+  </data>
+  <data name="STR_MFA_AUTHHELPSUBMESSAGE" xml:space="preserve">
+    <value>손가락을 떼었다가 다시 올려주세요. </value>
+  </data>
+  <data name="STR_MFA_CONTENT_CLOSE" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="STR_MFA_CONTENT_RETRY" xml:space="preserve">
+    <value>재시도</value>
+  </data>
+  <data name="STR_MFA_FAILANDFINMSG" xml:space="preserve">
+    <value>연결중인 USB를 찾을 수 없습니다.
+연결상태를 확인 후 다시 시도해 주세요. 
+작업을 종료 합니다.</value>
+  </data>
+  <data name="STR_MFA_FAILANDFINMSG_V2" xml:space="preserve">
+    <value>mfa 인증작업이 실패 했습니다. 
+연결 중인 USB가 있다면 재 연결 후 작업을 다시 시도해 주세요.
+작업을 종료 합니다.</value>
+  </data>
+  <data name="STR_MFA_FAILANDRETRYMSG" xml:space="preserve">
+    <value>연결중인 USB를 찾을 수 없습니다.
+USB 연결상태를 확인 후 다시 시도해 주세요. 
+다시 시도 하시겠습니까?</value>
+  </data>
+  <data name="STR_MFA_FAILMSG" xml:space="preserve">
+    <value>mfa 인증작업이 실패 했습니다. 인증 작업을 재 시도 하시겠습니까? </value>
+  </data>
+  <data name="STR_MFA_FAILTITLE" xml:space="preserve">
+    <value>인증 실패</value>
+  </data>
+  <data name="STR_MFA_FAIL_RESULTMSG_FIRST" xml:space="preserve">
+    <value>로그인 작업이 실패 했습니다</value>
+  </data>
+  <data name="STR_MFA_FAIL_RESULTMSG_SECOND" xml:space="preserve">
+    <value>재시도 버튼을 클릭하시면 인증작업이 다시 시작 됩니다.</value>
+  </data>
+  <data name="STR_MFA_HELPMSG" xml:space="preserve">
+    <value>인증 작업을 시작합니다. LED가 깜빡이는 장치에 사용자 지문을 탭하세요
+지문접촉 시 LED 가 붉게 점등되면 다시 시도해 주세요.</value>
+  </data>
+  <data name="STR_MFA_REGPUFHELPMSG" xml:space="preserve">
+    <value>등록 절차가 완료 되었습니다.
+연결 중인 USB 장치를 PC에서 제거 후 다시 연결해 주세요.</value>
+  </data>
+  <data name="STR_MFA_REREGHELPMSG" xml:space="preserve">
+    <value>재 등록 작업을 시작합니다. LED가 깜빡이는 장치에 사용자 지문을 탭하세요
+재 등록은 기 등록을 초기화 후 등록 작업을 진행합니다.
+인증을 위한 기 등록 지문을 입력후 인증완료 시 초기화 작업 및 재 등록 작업이 진행 됩니다.
+화면에 출력되는 요청 메시지를 확인 하시고 작업을 진행 해 주세요,</value>
+  </data>
+  <data name="STR_MFA_RESETHELPMSG" xml:space="preserve">
+    <value>해지 절차를 위해 사용자 인증을 진행하고 있습니다.
+MFA 인증에 성공하면 해지 절차가 진행되며, 절차 완료 후 기존 등록 정보는 모두 삭제됩니다.</value>
+  </data>
+  <data name="STR_MFA_RESETRESULTHELPMSG" xml:space="preserve">
+    <value>해지 절차가 완료 되었습니다.
+연결 중인 USB 장치를 PC에서 제거 후 다시 연결해 주세요.</value>
+  </data>
+  <data name="STR_MFA_SIGNUPHELPMSG" xml:space="preserve">
+    <value>등록 작업을 시작합니다. LED가 깜빡이는 장치에 사용자 지문을 탭하세요
+등록을 위해 지문을 3회 입력 받습니다.
+화면에 지문의 재 접촉을 요청하는 메시지를 확인 하시고 등록 작업을 진행 해 주세요,</value>
+  </data>
+  <data name="STR_MFA_SUCCESS_RESULTMSG_FIRST" xml:space="preserve">
+    <value>성공적으로 로그인 작업이 완료 되었습니다.</value>
+  </data>
+  <data name="STR_MFA_SUCCESS_RESULTMSG_SECOND" xml:space="preserve">
+    <value>종료 버튼을 클릭하시면 관리자 페이지가 호출됩니다.</value>
+  </data>
+  <data name="STR_MSG_SAVELASTLOGININFO" xml:space="preserve">
+    <value>마지막 로그인 정보를 저장하시겠습니까?
+저장된 정보는 PC Agent 재 시작 시 사용됩니다.</value>
+  </data>
+  <data name="STR_PRODUCT_NAME" xml:space="preserve">
+    <value>SecureTrust</value>
+  </data>
+  <data name="STR_RETSTR_FAIL_MFAAUTH" xml:space="preserve">
+    <value>지문인증 작업이 실패했습니다</value>
+  </data>
+  <data name="STR_RETSTR_SUCCESSMFAAUTH" xml:space="preserve">
+    <value>지문인증 작업이 성공했습니다</value>
+  </data>
+  <data name="STR_SET_CHANGELANGHELP" xml:space="preserve">
+    <value>어플리케이션에서 사용하는 언어를 변경.</value>
+  </data>
+  <data name="STR_SET_CHANG_HTTPLISTENERHELP_V2" xml:space="preserve">
+    <value>관리자 웹페이지와의 통신 설정</value>
+  </data>
+  <data name="STR_SET_HTTP_LINTEN_PORT" xml:space="preserve">
+    <value>* http Listen PORT :</value>
+  </data>
+  <data name="STR_SET_LANGUAGE" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="STR_SET_LANGUAGE_WARNMSG" xml:space="preserve">
+    <value>변경 작업을 진행 하시겠습니까? \n진행 시 프로그램이 재 시작합니다.</value>
+  </data>
+  <data name="STR_SET_LANGUAGE_WARNMSG2" xml:space="preserve">
+    <value>변경 작업을 진행 하시겠습니까?</value>
+  </data>
+  <data name="STR_SET_MAINTITLE" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="STR_SET_SAVE" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="STR_SET_SSHLOGINHELP" xml:space="preserve">
+    <value>리모트 SSH 연결 시 보안 로그인 기능 설정.</value>
+  </data>
+  <data name="STR_SET_SSH_SET_IPADDR" xml:space="preserve">
+    <value>* TCP Server Listen IP Address :</value>
+  </data>
+  <data name="STR_SET_SSH_SET_PORT" xml:space="preserve">
+    <value>* TCP Server Listen PORT :</value>
+  </data>
+  <data name="STR_SET_WEBADMINHELP" xml:space="preserve">
+    <value>관리자 페이지의 보안 로그인 기능 설정.</value>
+  </data>
+  <data name="STR_SET_WEB_SET_IPADDR" xml:space="preserve">
+    <value>* Web Addmin Address or URL :</value>
+  </data>
+  <data name="STR_SET_WEB_SET_PORT" xml:space="preserve">
+    <value>* Web Listen PORT :</value>
+  </data>
+  <data name="STR_SIGNOUT_TITLE" xml:space="preserve">
+    <value>등록 취소 완료</value>
+  </data>
+  <data name="STR_SIGNOUT_WARN_MSG" xml:space="preserve">
+    <value>등록 취소 작업을 시작합니다.
+작업이 시작되면 기 등록 정보가 모두 삭제 됩니다.
+작업을 진행 하시겠습니까?</value>
+  </data>
+  <data name="STR_SIGNUP_TITLE" xml:space="preserve">
+    <value>등록 완료</value>
+  </data>
+  <data name="STR_WATING_DLGMSG" xml:space="preserve">
+    <value>잠시만 기다려주세요...</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_REREG" xml:space="preserve">
+    <value>재등록</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_SIGNIN" xml:space="preserve">
+    <value>인증</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_SIGNOUT" xml:space="preserve">
+    <value>등록제거</value>
+  </data>
+  <data name="STR_WINTITLE_MFA_SIGNUP" xml:space="preserve">
+    <value>등록</value>
+  </data>
+  <data name="STR_WORKERROR_TITLE" xml:space="preserve">
+    <value>작업오류</value>
+  </data>
+</root>

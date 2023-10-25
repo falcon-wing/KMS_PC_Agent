@@ -1,0 +1,317 @@
+﻿<Window x:Class="SecureTrustAgent.InformationWindowClass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:localization="clr-namespace:SecureTrustAgent.Localization"
+        xmlns:local="clr-namespace:SecureTrustAgent"
+        mc:Ignorable="d"
+        Title="InformationWindowClass" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Windows_MouseDown"
+        >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
+    <Border x:Name="inform_window_border" CornerRadius="5">
+        <Border CornerRadius="3"
+                BorderThickness="1"
+            Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FF93D0E5" Offset="0"/>
+                    <GradientStop Color="#FF2B61F5" Offset="0.75"/>
+                    <GradientStop Color="#FFA8CEE3" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#FF1F1F2B" Offset="0"/>
+                    <GradientStop Color="#FF494A58" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Button x:Name="btnMinimize"
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#278BEF"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="1"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button x:Name="btnClose"
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnClose_Click">
+
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#DA34AE"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#C62DAE"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="1"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+                </Grid>
+
+                <Button x:Name="HomeBtn" 
+                        Background="Transparent"
+                        Foreground="Transparent"
+                        HorizontalAlignment="Left" 
+                        Height="25" 
+                        Margin="30,30,0,0" 
+                        Grid.RowSpan="2" 
+                        VerticalAlignment="Top" 
+                        Width="25" Click="HomeBtn_Click">
+                    <Image Source="image\home_icon-icons.com_73532.png"></Image>
+                </Button>
+                
+                <StackPanel Width="250"
+                            Grid.Row="1"
+                            Orientation="Vertical"
+                            Margin="10,35,538,0">
+                    <Image Source="/Image/information.png"
+                           Width="100" Height="100"/>
+                    <TextBlock Text="{x:Static localization:res.STR_INFOM_MAINTITLE}"
+                               Foreground="DarkGray"
+                               FontSize="35"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Text="{x:Static localization:res.SET_INFORM_SUBTITLE}"
+                               Foreground="LightGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               Margin="0,5,0,0"/>
+
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="354" Margin="330,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="463">
+
+                    <TextBlock x:Name="tb_WebadminHelp" Text="{x:Static localization:res.STR_INFORM_FIRSTWHAT}"
+                               Foreground="LightGray"
+                               FontSize="20"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               Margin="5,5,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecorationCollection>
+                                <TextDecoration  
+        PenThicknessUnit="FontRecommended">
+                                    <TextDecoration.Pen>
+                                        <Pen Thickness="1.5">
+                                            <Pen.Brush>
+                                                <LinearGradientBrush Opacity="0.5"
+                StartPoint="0,0.5"  EndPoint="1,0.5">
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="Yellow" Offset="0" />
+                                                        <GradientStop Color="Red" Offset="1" />
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Pen.Brush>
+                                            <Pen.DashStyle>
+                                                <DashStyle Dashes="2"/>
+                                            </Pen.DashStyle>
+                                        </Pen>
+                                    </TextDecoration.Pen>
+                                </TextDecoration>
+                            </TextDecorationCollection>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+
+                    <Button Margin="15" Content="PUF (Physically Unclonable Functions)는..." Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <TextBlock TextDecorations="Underline">
+                <ContentPresenter />
+                                </TextBlock>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Foreground" Value="Blue" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Foreground" Value="Red" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <!-- SECOND  -->
+                    <TextBlock Text="{x:Static localization:res.STR_INFORM_SECONDWHAT}"
+                               Foreground="LightGray"
+                               FontSize="20"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               Margin="0,30,0,0"
+                               >
+                        <TextBlock.TextDecorations>
+                            <TextDecorationCollection>
+                                <TextDecoration  
+        PenThicknessUnit="FontRecommended">
+                                    <TextDecoration.Pen>
+                                        <Pen Thickness="1.5">
+                                            <Pen.Brush>
+                                                <LinearGradientBrush Opacity="0.5"
+                StartPoint="0,0.5"  EndPoint="1,0.5">
+                                                    <GradientStop Color="Yellow" Offset="0" />
+                                                    <GradientStop Color="Red" Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Pen.Brush>
+                                            <Pen.DashStyle>
+                                                <DashStyle Dashes="2"/>
+                                            </Pen.DashStyle>
+                                        </Pen>
+                                    </TextDecoration.Pen>
+                                </TextDecoration>
+                            </TextDecorationCollection>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+
+                    <Button Margin="15" Content="Via PUF 기술" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <TextBlock TextDecorations="Underline">
+                <ContentPresenter />
+                                </TextBlock>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Foreground" Value="Blue" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Foreground" Value="Red" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <!-- THIRD  -->
+                    <TextBlock Text="{x:Static localization:res.STR_INFORM_THIRDWHAT}"
+                               Foreground="LightGray"
+                               FontSize="20"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               Margin="0,30,0,0"
+                               >
+                        <TextBlock.TextDecorations>
+                            <TextDecorationCollection>
+                                <TextDecoration  
+        PenThicknessUnit="FontRecommended">
+                                    <TextDecoration.Pen>
+                                        <Pen Thickness="1.5">
+                                            <Pen.Brush>
+                                                <LinearGradientBrush Opacity="0.5"
+                StartPoint="0,0.5"  EndPoint="1,0.5">
+                                                    <GradientStop Color="Yellow" Offset="0" />
+                                                    <GradientStop Color="Red" Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Pen.Brush>
+                                            <Pen.DashStyle>
+                                                <DashStyle Dashes="2"/>
+                                            </Pen.DashStyle>
+                                        </Pen>
+                                    </TextDecoration.Pen>
+                                </TextDecoration>
+                            </TextDecorationCollection>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+
+                    <Button Margin="15" Content="IoT Security " Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <TextBlock TextDecorations="Underline">
+                <ContentPresenter />
+                                </TextBlock>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Foreground" Value="Blue" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Foreground" Value="Red" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

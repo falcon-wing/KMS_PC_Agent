@@ -1,0 +1,104 @@
+﻿<Window x:Class="SecureTrustAgent.SflashWindowClass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecureTrustAgent"
+        mc:Ignorable="d"
+        Title="SflashWindowClass" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Windows_MouseDown"
+        >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
+    <Border x:Name="sf_main_border" CornerRadius="5">
+        <!--      
+        <Border.Background>
+            <ImageBrush ImageSource="/image/backimage.jpg"
+                        Stretch ="Fill"/>
+        </Border.Background>
+-->
+        <Border CornerRadius="3"
+                BorderThickness="1"
+            Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FF93D0E5" Offset="0"/>
+                    <GradientStop Color="#FF2B61F5" Offset="0.75"/>
+                    <GradientStop Color="#FFA8CEE3" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#FF1F1F2B" Offset="0"/>
+                    <GradientStop Color="#FF494A58" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Width="250"
+                            Grid.Row="0"
+                            Orientation="Vertical"
+                            Margin="0,120,0,0">
+                    <Image x:Name="sf_logo_image"
+                           Width="200" Height="100"/>
+                    <!--
+                    <Image Source="/Image/ICTK_logo_blue_V.png"
+                           Width="100" Height="100"/>
+                    -->
+                    <TextBlock Text="Single Sign-On"
+                               Foreground="DarkGray"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Text="Sign  in  with  our  organizational  account"
+                               Foreground="LightGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               Margin="0,5,0,0"/>
+                </StackPanel>
+                <TextBlock x:Name="sf_vender_slogan"
+                           HorizontalAlignment="Center" 
+                           Margin="0,382,0,0" 
+                           TextWrapping="Wrap" 
+                           Text="Powered by PUF" 
+                           TextAlignment="Center"
+                           Foreground="DarkGray"
+                           FontSize="15"
+                           FontWeight="Medium"
+                           FontFamily="Montserrat"
+                           Width="340"
+                           VerticalAlignment="Top"/>
+
+                <ProgressBar x:Name="flashProgressBar" HorizontalAlignment="Center" 
+                             Height="10" 
+                             Grid.Row="1" 
+                             VerticalAlignment="Center" 
+                             BorderThickness="0"
+                             Background="Transparent"
+                             Foreground="#FF5D6B99"
+                             Minimum="0"
+                             Maximum="100"
+                             Width="778"/>
+            </Grid>
+
+
+        </Border>
+    </Border>
+</Window>
